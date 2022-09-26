@@ -12,7 +12,7 @@ export default function Rodape() {
   return (
     <footer>
       <div style={rodape}>
-        <p>&copy;Desenvolvido por <b>Rafael Gama</b> - Todos os direitos reservados - 2022</p>
+        <p>&copy;Desenvolvido por <b>Pedro Pigari, Rafael Gama, Thais Spinoza, Vinicius Araújo</b> - Todos os direitos reservados - 2022</p>
       </div>
     </footer>
   )
