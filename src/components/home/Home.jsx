@@ -1,4 +1,5 @@
 import React from 'react'
+import PetCadastro from '../petCadastro/PetCadastro'
 
 
 export default function Home() {
@@ -11,11 +12,9 @@ export default function Home() {
     }
     return (
         <div style={home}>
-            <h1>Olá mundo</h1>
-            <figcaption>
-                
-                <p></p>
-            </figcaption>
+            <h1>Formulario PET</h1>
+            <PetCadastro />
+
         </div>
     )
 }
