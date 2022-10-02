@@ -1,33 +1,45 @@
 import React from "react"
-import { DivEst,Botao } from "../../style/styled.js"
+import { useState } from "react"
+import { DivEst,Botao } from "../../style/styled"
+import Petdados from "./Petdados"
 
+export default  function PetCadastro(){
 
-export default function PetCadastro() {
-    return (
-
-        <DivEst>
-            <h1>Cadastro do Pet</h1>
-            <form action="">
-                <label htmlFor="">Nome Pet:</label><input type="text" name="" id="" placeholder="Nome Pet" />
-                    <br />
-                <label htmlFor="">Idade:</label><input type="text" name="" id="" placeholder="idade"/>
-                        <br />
-                <label htmlFor="">Raça:</label><input type="text" name="" id="" placeholder="raça"/>
-                    <br />
-                <label htmlFor="">tamanho:</label><input type="text" name="" id="" placeholder="pequeno,medio,grande"/>
-                    <br />
-                <label htmlFor="">Nome Dono:</label><input type="text" name="" id="" placeholder="Nome dono"/>
-                        <br />
-                <label htmlFor="">Telefone Dono:</label><input type="text" name="" id="" placeholder="(11)000000000"/>
-                            <br />
-                <label htmlFor="">Image do Pet:</label><input type="text" name="" id="" placeholder="anexar"/>
-                            <br />
-                <label htmlFor="">Observações:</label><input type="text" name="" id="" placeholder="descreva"/>
-                        <br />
-                        <br />
-                <Botao>enviar!</Botao>
-
-            </form>
-        </DivEst>
-    )
+    const [petdados,setPetdados]=useState([
+        {
+           titulo:"Cadastro do Pet", 
+           nome:"nome do pet", 
+           idade:"idade do pet",
+           raca:"raça do pet",
+           tamanho:"tamanho do pet",
+           nomedono:"nome do dono",
+           telefone:"tel do dono",
+           img:"imagem do pet",
+           obs:"obs", 
+        }
+    ])
+    
+        return (
+            
+            <>
+                
+                {petdados.map((pet,i)=>
+                <Petdados
+                    key ={i}
+                    tituloprops={pet.titulo}
+                    nomeprops={pet.nome}
+                    idadeprops={pet.idade}
+                    racaprops={pet.raca}
+                    tamanhoprops={pet.tamanho}
+                    nomedonoprops={pet.nomedono}
+                    telefoneprops={pet.telefone}
+                    imgprops={pet.img}
+                    obsprops={pet.obs}
+                    />    
+               )}
+               
+            </>
+        )
 }
+
+   

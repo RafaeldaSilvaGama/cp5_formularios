@@ -1,6 +1,7 @@
 import React from 'react';
-import PetCadastro from './components/petCadastro/PetCadastro';
 import './index.css';
+
+import PetCadastro from './components/petCadastro/PetCadastro';
 
 
 
@@ -8,7 +9,10 @@ export default function App() {
 
     return (
         <>
-            <PetCadastro/>
+
+         
+           
+            <PetCadastro />
             
         </>
     )
